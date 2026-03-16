@@ -1,0 +1,221 @@
+/* ============================================================
+   GLOBAL & LAYOUT
+   ============================================================ */
+.dashboard-wrapper {
+  background: #05070a;
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background-image: radial-gradient(circle at 50% -20%, rgba(0, 242, 255, 0.1), transparent);
+}
+
+.mobile-toggle{
+  display: none;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.01);
+  backdrop-filter: blur(25px) saturate(150%);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  z-index: 1000;
+  padding: 40px 20px;
+  transition: 0.3s transform ease;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  padding: 30px;
+  width: calc(100% - 260px);
+  transition: 0.3s all;
+}
+
+/* ============================================================
+   NEON & GLASS UI ELEMENTS
+   ============================================================ */
+.neon-text-blue, .neon-text-pink, .neon-text-green {
+  color: #00f2ff;
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.7), 0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+
+.custom-tooltip-glass {
+  background: rgba(10, 14, 23, 0.9) !important; 
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 242, 255, 0.3); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+  color: white;
+}
+
+/* Tooltip ke andar ke text ki formatting */
+.custom-tooltip-glass p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 242, 255, 0.15);
+  border-radius: 24px;
+  padding: 25px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.top-bar-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 12px;
+  padding: 10px 20px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.glass-input:focus {
+  border-color: #00f2ff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ============================================================
+   NAVIGATION & BUTTONS
+   ============================================================ */
+.nav-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.nav-btn.active {
+  background: rgba(0, 242, 255, 0.1) !important;
+  color: #00f2ff !important;
+  border-left: 4px solid #00f2ff !important;
+}
+
+.neon-btn-blue {
+  background: transparent;
+  border: 1px solid #00f2ff;
+  color: #00f2ff;
+  box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+.neon-btn-blue:hover {
+  background: #00f2ff;
+  color: #0a0e17;
+  box-shadow: 0 0 20px #00f2ff;
+}
+
+/* ============================================================
+   BADGES (Cleaned & Unique Colors)
+   ============================================================ */
+.badge-neon {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.badge-neon.elite {
+  background: rgba(0, 242, 255, 0.1);
+  color: #00f2ff;
+  border: 1px solid #00f2ff;
+}
+
+.badge-neon.rising {
+  background: rgba(57, 255, 20, 0.1) !important;
+  color: #39ff14 !important;
+  border: 1px solid rgba(57, 255, 20, 0.3) !important;
+}
+
+/* ============================================================
+   PAGINATION (Consolidated)
+   ============================================================ */
+.pagination-glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 242, 255, 0.1);
+  border-bottom-left-radius: 24px; 
+  border-bottom-right-radius: 24px;
+}
+
+.pg-nav-simple {
+  background: rgba(0, 242, 255, 0.05);
+  border: 1px solid rgba(0, 242, 255, 0.2);
+  color: #00f2ff;
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.pg-nav-simple:hover:not(:disabled) {
+  background: rgba(0, 242, 255, 0.15);
+  border-color: #00f2ff;
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.pg-nav-simple:disabled {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.2);
+  cursor: not-allowed;
+}
+
+.neon-text-blue {
+  color: #00f2ff;
+  text-shadow: 0 0 8px rgba(0, 242, 255, 0.8);
+  font-weight: 800;
+  padding: 0 4px;
+}
+
+.text-white-50 {
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   RESPONSIVE & ANIMATIONS
+   ============================================================ */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
